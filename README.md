@@ -38,5 +38,5 @@ docker run -it -v $(pwd)/config:/opt/xray/config -v $(pwd)/reports:/opt/xray/rep
 Scan a target with a custom configuration file and save HTML output to a shared folder:
 
 ```bash
-sudo docker run -it -v $(pwd)/config:/opt/xray/config -v $(pwd)/reports:/opt/xray/reports xray-scanner xray --config /opt/xray/config/my-config.yaml webscan --url http://vulnerable-url.test1234 --html-output /opt/xray/reports/scan.html
+docker run -it -v $(pwd)/config:/opt/xray/config -v $(pwd)/reports:/opt/xray/reports xray-scanner xray --config /opt/xray/config/my-config.yaml webscan --url http://vulnerable-url.test1234 --html-output /opt/xray/reports/scan.html
 ```
